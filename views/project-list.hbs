@@ -1,0 +1,26 @@
+<div class="hero">
+  <h1>{{title}}</h1>
+  <p>Here are a few projects I have completed on my path set via The Odin
+    Project. You can see my whole repository at
+    <a href="https://github.com/treymorris">GitHub</a>, of course!</p>
+</div>
+<div class="project-container">
+  <div class="project">
+    {{#each project_list}}
+      <div>
+        <li class="project-li"><a href={{this.url}}><img
+              src={{this.src}}
+              alt="projectspecific"
+            /></a></li>
+        {{log this}}
+      </div>
+      <div class="project-description">
+        <a href={{this.url}}>
+          <h2>{{this.name}}</h2>
+        </a>
+        <p>{{this.description}}</p>
+      </div>
+    {{/each}}
+  </div>
+</div>
+<div class="backToTopBtn"><a href="/project">Back to Top</a></div>

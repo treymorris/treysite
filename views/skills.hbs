@@ -1,0 +1,36 @@
+<div class="hero">
+  <h1>{{title}}</h1>
+  <p>Here are a few of the skills I've picked up along the way.
+    
+</div>
+<div class="skills-container">
+    <h3>Front End</h3>
+    {{#each skills_list}}
+      {{#if front}}
+        <a href={{this.url}}><div class="icon-container"><img
+              src={{this.src}}
+              class="shrink"
+            /></div></a>
+      {{/if}}
+    {{/each}}
+    
+    <h3>Back End</h3>
+    {{#each skills_list}}
+      {{#if back}}
+        <a href={{this.url}}><div class="icon-container"><img
+              src={{this.src}}
+              class="shrink"
+            /></div></a>
+      {{/if}}
+    {{/each}}
+    
+    <h3>Misc.</h3>
+    {{#each skills_list}}
+      {{#if misc}}
+        <a href={{this.url}}><div class="icon-container"><img
+              src={{this.src}}
+              class="shrink"
+            /></div></a>
+      {{/if}}
+    {{/each}}
+</div>
