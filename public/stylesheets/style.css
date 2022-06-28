@@ -6,14 +6,20 @@
   --bg-blue: rgba(39, 39, 179, 0.854);
 }
 
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
 body {
-  padding: 50px;
   font-size: 14px;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
     "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
     sans-serif;
   max-width: 60vw;
   margin:  auto;
+  
 }
 
 a {
@@ -34,7 +40,7 @@ button {
   background-color: var(--bg-blue);
   width: 10vw;
   height: 5vh;
-  margin: 2em auto 0 auto;
+  margin: 2em auto 2em auto;
   border-radius: 25px;
   display: flex;
   justify-content: center;
@@ -53,8 +59,8 @@ input {
 }
 
 li img {
-  height: 450px;
-  width: 750px;
+  height: 375px;
+  width: 650px;
 }
 
 label {
@@ -72,11 +78,9 @@ textarea {
 }
 
 .container {
-  display: grid;
-  gap: 10px;
-  margin: 5em auto 0 auto;
+  display: flex;
+  margin: 7em auto 0 auto;
   max-width: 50vw;
-  
 }
 
 .form-container {
@@ -93,16 +97,30 @@ textarea {
 .footer {
   display: flex;
   justify-content: space-between;
-  margin-top: 5em;
+  height: 50px;
+  
+  margin: 1em auto;
+  width: 50vw;
+}
+
+.footerhr {
+  width: 50vw;
+  margin: auto;
+  
 }
 
 .hero {
   background-color: var(--bg-light);
   padding: 2em;
   width: 50vw;
+  line-height: 1.5em;
   margin: 5em auto 0 auto;
   font-size: 1.5em;
 }
+
+.hero  h1 {
+  margin-bottom: .5em;
+} 
 
 .icon-container {
   width: 105px;
@@ -123,36 +141,24 @@ textarea {
 }
 
 .nav-links {
-  grid-column: 2 / span 3;
-  display: grid;
-  font-size: 1.25em;
+  margin-left: 2em;
+  
+  font-size: 1.5em;
 }
 
-.nav-item1 {
-  grid-column: 1 / span 2;
-  grid-row: 1;
+.nav-item {
+  margin-right: 1.5em;
+}
+
+.nav-name {
+  margin-top: .5em;
+  margin-bottom: .5em;
+  height: fit-content;
+  width:fit-content;
   border-bottom-style: solid;
   border-bottom-color: var(--bg-blue);
   border-bottom-width: 5px;
   text-align: center;
-}
-
-.nav-item2 {
-  grid-column: 1;
-  grid-row: 2;
-}
-
-.nav-item3 {
-  grid-column: 2;
-  grid-row: 2;
-}
-.nav-item4 {
-  grid-column: 3;
-  grid-row: 2;
-}
-.nav-item5 {
-  grid-column: 4;
-  grid-row: 2;
 }
 
 .project {
@@ -160,6 +166,7 @@ textarea {
   flex-wrap: wrap;
   align-items: center;
   justify-content: center;
+  width: 50vw;
 }
 
 .project-description {
@@ -197,4 +204,9 @@ textarea {
   margin-top: 2em;
   text-align: center;
   font-size: 2rem;
+}
+
+
+.main {
+  min-height: calc(100vh - 175px);
 }
