@@ -38,18 +38,20 @@ a:hover {
 
 button {
   background-color: var(--bg-blue);
-  width: 10vw;
-  height: 5vh;
+  width: 15vw;
+  height: 4vh;
   margin: 2em auto 2em auto;
   border-radius: 25px;
   display: flex;
   justify-content: center;
   align-items: center;
   color: white;
+  border: none;
 }
 
 button:hover {
-  opacity: 0.95;
+  
+  box-shadow: 3px 3px 3px 3px black;
 }
 
 input {
@@ -81,6 +83,10 @@ textarea {
   display: flex;
   margin: 7em auto 0 auto;
   max-width: 50vw;
+}
+
+.errors {
+  color: red;
 }
 
 .form-container {
@@ -126,6 +132,8 @@ textarea {
   width: 105px;
   height: 105px;
   margin-right: 1.5em;
+  margin-top: 1em;
+  margin-bottom: 2em;
   background-color: var(--bg-light);
   display: inline-flex;
   justify-content: space-around;
@@ -196,7 +204,7 @@ textarea {
 }
 
 .skills-container {
-  margin: 2em 0 0 10em;
+  margin: 2em 0 0 3em;
   padding: 2em;
 }
 

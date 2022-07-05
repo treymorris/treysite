@@ -5,16 +5,26 @@ require("dotenv").config();
 
 exports.create_message = [
   // validate and sanitize
-  body("name", "Name cannot be empty").trim().isLength({ min: 1 }).escape(),
-  body("email", "Email cannot be empty").trim().isLength({ min: 1 }).escape(),
-  body("subject", "Subject cannot be empty")
+  body("name")
     .trim()
     .isLength({ min: 1 })
-    .escape(),
-  body("message", "Message cannot be empty")
+    .escape()
+    .withMessage("Name cannot be empty"),
+  body("email")
     .trim()
     .isLength({ min: 1 })
-    .escape(),
+    .escape()
+    .withMessage("Email cannot be empty"),
+  body("subject")
+    .trim()
+    .isLength({ min: 1 })
+    .escape()
+    .withMessage("Subject cannot be empty"),
+  body("message")
+    .trim()
+    .isLength({ min: 1 })
+    .escape()
+    .withMessage("Message cannot be empty"),
 
   // process request
   (req, res, next) => {
@@ -22,6 +32,15 @@ exports.create_message = [
     const errors = validationResult(req.body);
 
     if (!errors.isEmpty()) return res.json({ errors: errors.array() });
+
+    // if (!errors.isEmpty()) {
+    //   // There are errors. Render the form again with sanitized values/error messages.
+    //   res.render("contact-page", {
+    //     title: "Contact",
+    //     errors: errors.array(),
+    //   });
+    //   return;
+    // }
 
     const message = new Message({
       name: req.body.name,

@@ -1,32 +1,33 @@
 <div class="hero">
   <h1>{{title}}</h1>
-  <p>If you would like to discuss a project or have a question, please fill out
+  <p>If you would like to discuss a project, a job opportunity, or have a question, please fill out
     the form below. I will get back to you as soon as possible.</p>
 </div>
 <div class="form-container">
   <form method="POST" action="" class="contact-form" target="_parent">
     <div class="form-group name">
       <label for="name">Name*</label>
-      <input type="text" name="name" class="form-control" />
+      <input type="text" name="name" class="form-control" required="true" />
     </div>
     <div class="form-group email">
       <label for="email">Email*</label>
-      <input type="email" name="email" class="form-control" />
+      <input type="email" name="email" class="form-control" required="true" />
     </div>
     <div class="form-group">
       <label for="subject">Subject*</label>
-      <input type="text" name="subject" class="form-control" />
+      <input type="text" name="subject" class="form-control" required="true" />
     </div>
     <div class="form-group">
       <label for="message">Message*</label>
-      <textarea rows="5" class="form-control" name="message"></textarea>
+      <textarea rows="5" class="form-control" name="message" required="true" ></textarea>
     </div>
     <button type="submit">Send it!</button>
   </form>
 </div>
 
-{{#each errors}}
+{{!-- {{#each errors}}
   <ul>
-    <li>{{this.msg}}</li>
+    <li class="errors" >{{this.msg}}</li>
+    {{log errors}}
   </ul>
-{{/each}}
+{{/each}} --}}
