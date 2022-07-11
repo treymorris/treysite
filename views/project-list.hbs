@@ -7,6 +7,7 @@
 <div class="project-container">
   <div class="project">
     {{#each project_list}}
+    {{#if published}}
       <div>
         <li class="project-li"><a href={{this.url}} target="_blank" ><img
               src={{this.src}}
@@ -20,6 +21,7 @@
         </a>
         <p>{{this.description}}</p>
       </div>
+      {{/if}}
     {{/each}}
   </div>
 </div>
