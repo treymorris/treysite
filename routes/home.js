@@ -13,7 +13,7 @@ router.get("/work", function (req, res, next) {
   res.render("work-list", { title: "Work" });
 });
 
-router.get("/project", projects_controller.projects_list);
+router.get("/projects", projects_controller.projects_list);
 
 router.post("/contact", contact_controller.create_message);
 
